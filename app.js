@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const { errors } = require('celebrate');
 const helmet = require('helmet');
 
-const { PORT = 3000 } = process.env;
+const { PORT = 3000, NODE_ENV, PRODUCT_URL } = process.env;
 const app = express();
 
 const router = require('./src/routes/index');
@@ -14,7 +14,7 @@ const limiter = require('./src/middlewares/limiter');
 const errorHandler = require('./src/middlewares/errorHandler');
 const { MONGO_URL } = require('./src/utils/constants');
 
-mongoose.connect(MONGO_URL, {
+mongoose.connect(NODE_ENV === 'production' ? PRODUCT_URL : MONGO_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });

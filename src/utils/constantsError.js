@@ -5,6 +5,7 @@ const BAD_REQUEST_MOVIE_ERROR = 'Переданы некорректные да�
 const BAD_REQUEST_USER_ERROR = 'Переданы некорректные данные при создании пользователя';
 const BAD_REQUEST_UPDATE_USER_ERROR = 'Переданы некорректные данные при обновлении профиля';
 const FORBIDDEN_MOVIE_ERROR = 'Отсутствуют права на уделение фильма';
+const CONFLICT_MOVIE_ERROR = 'Такой фильм уже существует';
 const CONFLICT_USER_ERROR = 'Пользователь с таким email уже существует';
 const UNAUTHORIZED_ERROR = 'Необходима авторизация';
 const AUTHENTIFICATION_ERROR = 'Неверный email или пароль';
@@ -13,7 +14,7 @@ const SERVER_ERROR = 'На сервере произошла ошибка';
 const REQUIRED_INPUT_ERROR = 'Поле не может быть пустым';
 const VALIDATION_LINK_ERROR = 'Некорректный формат ccылки';
 const VALIDATION_EMAIL_ERROR = 'Некорректный формат email';
-const REMOVE_MOVIE_OK = 'Фильма удален';
+const REMOVE_MOVIE_OK = 'Фильм удален';
 
 module.exports = {
   NOT_FOUND_MOVIE_ERROR,
@@ -23,6 +24,7 @@ module.exports = {
   BAD_REQUEST_USER_ERROR,
   BAD_REQUEST_UPDATE_USER_ERROR,
   FORBIDDEN_MOVIE_ERROR,
+  CONFLICT_MOVIE_ERROR,
   CONFLICT_USER_ERROR,
   UNAUTHORIZED_ERROR,
   AUTHENTIFICATION_ERROR,

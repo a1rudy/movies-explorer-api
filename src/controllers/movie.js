@@ -2,11 +2,13 @@ const Movie = require('../models/movie');
 const BadRequestError = require('../errors/bad-request-error');
 const NotFoundError = require('../errors/not-found-error');
 const ForbiddenError = require('../errors/forbidden-error');
+const ConflictError = require('../errors/conflict-error');
 const {
   BAD_REQUEST_MOVIE_ERROR,
   NOT_FOUND_MOVIE_ERROR,
   FORBIDDEN_MOVIE_ERROR,
   REMOVE_MOVIE_OK,
+  CONFLICT_MOVIE_ERROR,
 } = require('../utils/constantsError');
 
 const OK = 200;
@@ -52,6 +54,8 @@ const createMovie = (req, res, next) => {
     .catch((err) => {
       if (err.name === 'ValidationError') {
         throw new BadRequestError(BAD_REQUEST_MOVIE_ERROR);
+      } else if (err.code === 11000) {
+        throw new ConflictError(CONFLICT_MOVIE_ERROR);
       }
     })
     .catch(next);
