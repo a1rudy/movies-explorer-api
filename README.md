@@ -23,11 +23,11 @@ POST https://api.project-movies-a1rudy.nomoredomains.club/signup
 
 В теле запроса передать объект вида
 
-  {
-    "name": "Alexey Rudoy",
-    "email": "admin@admin.ru",
-    "password": "password",
-  }
+    {
+      "name": "Alexey Rudoy",
+      "email": "admin@admin.ru",
+      "password": "password",
+    }
 
 :heavy_check_mark: При успешном запросе в ответе приходит объект пользователя со статусом `200`.
 
@@ -43,10 +43,10 @@ POST https://api.project-movies-a1rudy.nomoredomains.club/signin
   
 В теле запроса передать объект вида
 
-  {
-    "email": "admin@admin.ru",
-    "password": "password"
-  }
+    {
+      "email": "admin@admin.ru",
+      "password": "password"
+    }
   
 :heavy_check_mark: При успешном запросе приходит токен пользователя со статусом `200`
 
@@ -59,10 +59,10 @@ PATCH https://api.project-movies-a1rudy.nomoredomains.club/users/me
 
 В теле запроса передать объект вида
 
-  {
-    "name": "Жак-Ив Кусто",
-    "email": "mail@mail.ru"
-  }
+    {
+      "name": "Жак-Ив Кусто",
+      "email": "mail@mail.ru"
+    }
   
 :heavy_check_mark: При успешном запросе в ответе приходит обновлённый объект пользователя со статусом `200`.
   
@@ -89,19 +89,19 @@ POST https://api.project-movies-a1rudy.nomoredomains.club/movies
 
 В теле запроса передать объект вида
 
-  {
-    "country": "СССР",
-    "director": "Владимир Меньшов",
-    "duration": 107,
-    "year": "1984 год",
-    "description": "Ликвидируя неисправность лебедки, Василий Кузякин получил травму и путевку на юг. Там он встретил роковую женщину Раису Захаровну и… вернулся Вася с курорта не к себе в деревню, а в дом Раисы Захаровны. Началась для него новая жизнь, в которой было много непонятного и интересного, но не было дома, где остались Надя, дети и голуби.",
-    "image": "https://avatars.mds.yandex.net/get-kinopoisk-image/1704946/683a8796-40fc-4c03-88d8-9e73913ac128/1080x",
-    "trailer": "https://www.kinopoisk.ru/film/45146/",
-    "nameRU": "Любовь и голуби",
-    "nameEN": "Love and Doves",
-    "thumbnail": "https://avatars.mds.yandex.net/get-kinopoisk-image/1704946/683a8796-40fc-4c03-88d8-9e73913ac128/1080x",
-    "movieId": 1
-  }
+    {
+      "country": "СССР",
+      "director": "Владимир Меньшов",
+      "duration": 107,
+      "year": "1984 год",
+      "description": "Ликвидируя неисправность лебедки, Василий Кузякин получил травму и путевку на юг. Там он встретил роковую женщину Раису Захаровну и… вернулся Вася с курорта не к себе в деревню, а в дом Раисы Захаровны. Началась для него новая жизнь, в которой было много непонятного и интересного, но не было дома, где остались Надя, дети и голуби.",
+      "image": "https://avatars.mds.yandex.net/get-kinopoisk-image/1704946/683a8796-40fc-4c03-88d8-9e73913ac128/1080x",
+      "trailer": "https://www.kinopoisk.ru/film/45146/",
+      "nameRU": "Любовь и голуби",
+      "nameEN": "Love and Doves",
+      "thumbnail": "https://avatars.mds.yandex.net/get-kinopoisk-image/1704946/683a8796-40fc-4c03-88d8-9e73913ac128/1080x",
+      "movieId": 1
+    }
   
 :heavy_check_mark: При успешном запросе в ответе приходит объект фильма со статусом `200`.
 
