@@ -9,6 +9,7 @@ const { PORT = 3000, NODE_ENV, PRODUCT_URL } = process.env;
 const app = express();
 
 const router = require('./src/routes/index');
+const cors = require('./src/middlewares/cors');
 const { requestLogger, errorLogger } = require('./src/middlewares/logger');
 const limiter = require('./src/middlewares/limiter');
 const errorHandler = require('./src/middlewares/errorHandler');
@@ -22,6 +23,7 @@ mongoose.connect(NODE_ENV === 'production' ? PRODUCT_URL : MONGO_URL, {
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.use(cors);
 app.use(requestLogger);
 app.use(helmet());
 app.use(limiter);
