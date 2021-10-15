@@ -14,7 +14,7 @@ const {
 const OK = 200;
 
 const getMovies = (req, res, next) => {
-  Movie.find({})
+  Movie.find({ owner: req.user._id })
     .then((card) => res.status(OK).send(card))
     .catch(next);
 };

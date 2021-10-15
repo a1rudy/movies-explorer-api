@@ -74,7 +74,6 @@ const movieSchema = new mongoose.Schema({
   movieId: {
     type: Number,
     required: [true, REQUIRED_INPUT_ERROR],
-    unique: true,
   },
   // название фильма на русском
   nameRU: {
